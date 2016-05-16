@@ -3,12 +3,14 @@
     .module('app')
     .controller('InfoController', InfoController);
 
-  function InfoController($routeParams){
+  function InfoController($routeParams, MoviesService){
     var vm = this;
 
-    // console.log($routeParams.id);
+    vm.title = 'This is the info page';
+    MoviesService.getMovie($routeParams.movieTitle).then(function(movie){
+      vm.movie = movie;
+      console.log(vm.movie);
+    });
 
-    // vm.movie = MoviesService.getImdbMovies(gump);
-    // console.log(vm.movie);
   }
 })();

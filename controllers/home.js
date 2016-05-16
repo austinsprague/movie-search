@@ -7,25 +7,11 @@
     var vm = this;
 
     vm.title = 'This is the home page';
+    // vm.movies = MoviesService.getMovie(vm.search);
+    // console.log(vm.movies);
 
     vm.submitSearch = function() {
       $location.path('/info/' + vm.search);
     }
-
-    // vm.movies = MoviesService();
-    //
-    // MoviesService.getImdbMovies().then(function(info){
-    //   console.log(info);
-    //   vm.info = info;
-    // })
-
   }
 })();
-
-
-// vm.movies = MoviesService.getMovies();
-
-// MoviesService.getImdbMovies().then(function(info){
-//   console.log(info);
-//   vm.info = info;
-// })

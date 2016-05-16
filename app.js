@@ -10,9 +10,9 @@
       controller: 'HomeController',
       controllerAs: 'Home',
       templateUrl: 'views/home.html'
-    }).when('/info/:id', {
+    }).when('/info/:movieTitle', {
       controller: 'InfoController',
-      contollerAs: 'Info',
+      controllerAs: 'Info',
       templateUrl: 'views/info.html'
     }).
     otherwise({
