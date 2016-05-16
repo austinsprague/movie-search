@@ -1,11 +1,21 @@
-<img ng-src="{{Info.movie.Poster}}" height="150px"></img>
-<p>Title: {{Info.movie.Title}}</p>
-<p>Year: {{Info.movie.Year}}</p>
-<p>Rated: {{Info.movie.Rated}}</p>
-<p>Released: {{Info.movie.Released}}</p>
-<p>Runtime: {{Info.movie.Runtime}}</p>
-<p>Genre: {{Info.movie.Genre}}</p>
-<p>Director: {{Info.movie.Director}}</p>
-<p>Actors: {{Info.movie.Actors}}</p>
-<p>Plot: {{Info.movie.Plot}}</p>
-<p>Awards: {{Info.movie.Awards}}</p>
+<div class="row">
+  <h2>{{Info.movie.Title}}</h2>
+  <div class="col-sm-4">
+    <img ng-src="{{Info.movie.Poster}}"></img>
+  </div>
+  <div class="col-sm-8">
+    <h5>Starring: {{Info.movie.Actors}}</h5>
+    <p>{{Info.movie.Plot}}</p>
+    <br>
+    <h4><strong>Additional Details:</strong></h4>
+    <p>Awards <br> {{Info.movie.Awards}}</p>
+    <p>Year <br>{{Info.movie.Year}}</p>
+    <p>Rated <br> {{Info.movie.Rated}}</p>
+    <p>Released <br> {{Info.movie.Released}}</p>
+    <p>Runtime <br> {{Info.movie.Runtime}}</p>
+    <p>Genre <br> {{Info.movie.Genre}}</p>
+    <p>Director <br> {{Info.movie.Director}}</p>
+    <p>imdbRating <br> {{Info.movie.imdbRating}}</p>
+    <p>imdbVotes <br> {{Info.movie.imdbVotes}}</p>
+  </div>
+</div>

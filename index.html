@@ -3,21 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/superhero/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="style.css" rel="stylesheet" media="screen">
     <base href="/">
   </head>
   <body>
     <div class="page-header">
-      <h1>Movie Search App</h1>
+      <img ng-src="http://c.dryicons.com/images/icon_sets/shine_icon_set/png/256x256/movie_search.png" height="100px"/>
+      <h1>Angular OMDB API Search</h1>
     </div>
     <div class="container">
+      <div ng-include="'views/search.html'" ng-controller="SearchController as Search"></div>
       <div ng-view></div>
+
     </div>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js" charset="utf-8"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-route.js" charset="utf-8"></script>
     <script type="text/javascript" src="app.js"></script>
-    <script type="text/javascript" src="services.js"></script>
-    <script type="text/javascript" src="controllers/home.js"></script>
+    <script type="text/javascript" src="MoviesService.js"></script>
+    <script type="text/javascript" src="controllers/search.js"></script>
     <script type="text/javascript" src="controllers/info.js"></script>
   </body>
 </html>

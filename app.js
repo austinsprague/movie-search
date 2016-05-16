@@ -7,8 +7,6 @@
 
   function config($routeProvider, $locationProvider) {
     $routeProvider.when('/', {
-      controller: 'HomeController',
-      controllerAs: 'Home',
       templateUrl: 'views/home.html'
     }).when('/info/:movieTitle', {
       controller: 'InfoController',
