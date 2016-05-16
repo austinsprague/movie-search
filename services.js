@@ -11,7 +11,6 @@
         return $http.get(omdbapi + title)
           .then(function(data) {
             var movieInfo = data.data;
-            // console.log(movieInfo);
             return movieInfo;
           });
       }

@@ -6,7 +6,7 @@
   function HomeController($location, MoviesService) {
     var vm = this;
 
-    vm.title = 'This is the home page';
+    vm.title = 'Search for movie by Title';
     // vm.movies = MoviesService.getMovie(vm.search);
     // console.log(vm.movies);
 
