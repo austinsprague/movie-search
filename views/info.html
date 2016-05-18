@@ -1,23 +1,10 @@
 <div class="row" ng-repeat="movie in Info.movies">
   <div class="col-sm-6">
-    <h2>{{movie.Title}}</h2>
+    <h3>{{movie.Title}}</h2>
     <div class="col-sm-4" >
       <img ng-src="{{movie.Poster}}" height="150px"></img>
     </div>
     <div class="col-sm-9">
-      <h5>Starring:{{movie.Actors}}</h5>
-      <p>{{movie.Plot}}</p>
-      <br>
-      <h4><strong>Additional Details:</strong></h4>
-      <p>Awards <br> {{movie.Awards}}</p>
-      <p>Year <br>{{movie.Year}}</p>
-      <p>Rated <br> {{movie.Rated}}</p>
-      <p>Released <br> {{movie.Released}}</p>
-      <p>Runtime <br> {{movie.Runtime}}</p>
-      <p>Genre <br> {{movie.Genre}}</p>
-      <p>Director <br> {{movie.Director}}</p>
-      <p>imdbRating <br> {{movie.imdbRating}}</p>
-      <p>imdbVotes <br> {{movie.imdbVotes}}</p>
       <button type="submit" name="detail" ng-click="Info.getDetail(movie)" class="btn btn-primary" value="{{movie.imbdId}}">Get Details</button>
       <!-- <a type="submit" name="detail" ng-href="/detail/{{movie.imdbID}}" class="btn btn-primary" value="{{movie.imbdId}}">Get Details</a> -->
     </div>
