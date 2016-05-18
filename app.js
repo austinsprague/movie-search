@@ -12,6 +12,10 @@
       controller: 'InfoController',
       controllerAs: 'Info',
       templateUrl: 'views/info.html'
+    }).when('/detail/:movieId', {
+      controller: 'DetailController',
+      controllerAs: 'Detail',
+      templateUrl: 'views/detail.html'
     }).
     otherwise({
       redirectTo: '/'

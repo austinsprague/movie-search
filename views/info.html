@@ -1,21 +1,24 @@
-<div class="row">
-  <h2>{{Info.movie.Title}}</h2>
-  <div class="col-sm-4">
-    <img ng-src="{{Info.movie.Poster}}"></img>
-  </div>
-  <div class="col-sm-8">
-    <h5>Starring: {{Info.movie.Actors}}</h5>
-    <p>{{Info.movie.Plot}}</p>
-    <br>
-    <h4><strong>Additional Details:</strong></h4>
-    <p>Awards <br> {{Info.movie.Awards}}</p>
-    <p>Year <br>{{Info.movie.Year}}</p>
-    <p>Rated <br> {{Info.movie.Rated}}</p>
-    <p>Released <br> {{Info.movie.Released}}</p>
-    <p>Runtime <br> {{Info.movie.Runtime}}</p>
-    <p>Genre <br> {{Info.movie.Genre}}</p>
-    <p>Director <br> {{Info.movie.Director}}</p>
-    <p>imdbRating <br> {{Info.movie.imdbRating}}</p>
-    <p>imdbVotes <br> {{Info.movie.imdbVotes}}</p>
+<div class="row" ng-repeat="movie in Info.movies">
+  <div class="col-sm-6">
+    <h2>{{movie.Title}}</h2>
+    <div class="col-sm-4" >
+      <img ng-src="{{movie.Poster}}" height="150px"></img>
+    </div>
+    <div class="col-sm-9">
+      <h5>Starring:{{movie.Actors}}</h5>
+      <p>{{movie.Plot}}</p>
+      <br>
+      <h4><strong>Additional Details:</strong></h4>
+      <p>Awards <br> {{movie.Awards}}</p>
+      <p>Year <br>{{movie.Year}}</p>
+      <p>Rated <br> {{movie.Rated}}</p>
+      <p>Released <br> {{movie.Released}}</p>
+      <p>Runtime <br> {{movie.Runtime}}</p>
+      <p>Genre <br> {{movie.Genre}}</p>
+      <p>Director <br> {{movie.Director}}</p>
+      <p>imdbRating <br> {{movie.imdbRating}}</p>
+      <p>imdbVotes <br> {{movie.imdbVotes}}</p>
+      <button type="submit" name="detail" ng-submit="Detail.getDetail()" class="btn btn-primary">Get Details</button>
+    </div>
   </div>
 </div>
