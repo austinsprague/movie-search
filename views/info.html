@@ -18,7 +18,8 @@
       <p>Director <br> {{movie.Director}}</p>
       <p>imdbRating <br> {{movie.imdbRating}}</p>
       <p>imdbVotes <br> {{movie.imdbVotes}}</p>
-      <button type="submit" name="detail" ng-submit="Detail.getDetail()" class="btn btn-primary">Get Details</button>
+      <button type="submit" name="detail" ng-click="Info.getDetail(movie)" class="btn btn-primary" value="{{movie.imbdId}}">Get Details</button>
+      <!-- <a type="submit" name="detail" ng-href="/detail/{{movie.imdbID}}" class="btn btn-primary" value="{{movie.imbdId}}">Get Details</a> -->
     </div>
   </div>
 </div>

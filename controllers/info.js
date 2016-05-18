@@ -3,11 +3,17 @@
     .module('app')
     .controller('InfoController', InfoController);
 
-  function InfoController($routeParams, MoviesService){
+  function InfoController($routeParams, MoviesService, $location){
     var vm = this;
 
-    MoviesService.getMovie($routeParams.movieTitle).then(function(movie){
+    MoviesService.getMovies($routeParams.movieTitle).then(function(movie){
       vm.movies = movie;
     });
+
+    vm.getDetail = function(movie) {
+      console.log('get detail pushed');
+      console.log(movie);
+      $location.path('/detail/' + movie.imdbID);
+    }
   }
 })();
