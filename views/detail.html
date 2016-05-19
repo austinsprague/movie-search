@@ -1,1 +1,23 @@
-<h2>this is the detail page</h2>
+<div class="row">
+  <h3>{{Detail.movies.Title}}</h2>
+  <div class="col-sm-4" >
+    <img ng-src="{{Detail.movies.Poster}}"></img>
+  </div>
+  <div class="col-sm-8">
+
+
+    <h5>Starring:{{Detail.movies.Actors}}</h5>
+    <p>{{Detail.movies.Plot}}</p>
+    <br>
+    <h4><strong>Additional Details:</strong></h4>
+    <p>Awards <br> {{Detail.movies.Awards}}</p>
+    <p>Year <br>{{Detail.movies.Year}}</p>
+    <p>Rated <br> {{Detail.movies.Rated}}</p>
+    <p>Released <br> {{Detail.movies.Released}}</p>
+    <p>Runtime <br> {{Detail.movies.Runtime}}</p>
+    <p>Genre <br> {{Detail.movies.Genre}}</p>
+    <p>Director <br> {{Detail.movies.Director}}</p>
+    <p>imdbRating <br> {{Detail.movies.imdbRating}}</p>
+    <p>imdbVotes <br> {{Detail.movies.imdbVotes}}</p>
+  </div>
+</div>
